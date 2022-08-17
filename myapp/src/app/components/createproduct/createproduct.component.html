@@ -1,0 +1,56 @@
+<div class="container mt-5">
+    <div class="row">
+<div class="col-lg-6 offset-lg-3">
+    <div class="card">
+        <div class="card-body text-center">
+            <span class="title">{{titre}}</span>
+            <form  class="mt-4 "[formGroup]="productForm" (ngSubmit)="aggregateproduct()">
+                <div class="mb-4">
+                    <input type="text" formControlName="product"
+                    class="form-control form-control-lg"  placeholder="Produit">
+                    <div class="text-danger" *ngIf="productForm.get('product')?.hasError('required')&& productForm.get('product')?.touched">
+                        <span>error vide product</span>
+
+                    </div>
+                  </div>
+                 
+                  <div class="mb-4">
+                    <input type="text" formControlName="Nameprod"
+                    class="form-control form-control-lg"  placeholder="Nom Produit">
+                    <div class="text-danger" *ngIf="productForm.get('Nameprod')?.hasError('required')&& productForm.get('Nameprod')?.touched">
+                        <span>error nom du produit est vide</span>
+
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <input type="number" formControlName="quantity"
+                    class="form-control form-control-lg"  placeholder="quantity">
+                    <div class="text-danger" *ngIf="productForm.get('quantity')?.hasError('required')&& productForm.get('quantity')?.touched">
+                        <span>error quantite est vide </span>
+
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <input type="number" formControlName="prix"
+                    class="form-control form-control-lg"  placeholder="prix">
+                    <div class="text-danger" *ngIf="productForm.get('prix')?.hasError('required')&& productForm.get('prix')?.touched">
+                        <span>error le prix est vide </span>
+
+                    </div>
+                    <div class="mb-3">
+                        <div class="decal">
+                        <button  type="submit"  [disabled]="productForm.invalid" class="btn btn-info btn-lg">Ajouter</button>
+                        <button  routerLink="/"class="btn btn-secondary btn-lg ">retour</button>
+                    </div>
+                    </div>
+                  </div>
+                
+            </form>
+            
+        </div>
+    </div>
+</div>
+    </div>
+</div>

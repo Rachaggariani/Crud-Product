@@ -1,0 +1,64 @@
+<div class="container mt-5">
+<div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card">
+            <div class="card-body text-center">
+                <div class="deco">
+                <span ><div class="titre">List des produits</div></span>
+                <button class="btn btn-secondary " routerLink="/createproduct">AddProduct</button>
+            </div>
+            <table class="table table-striped mt-4">
+                <thead>
+                  <tr>
+                    <th scope="col">Produit</th>
+                    <th scope="col">Nom Produit</th>
+                    <th scope="col">quantite</th>
+                    <th scope="col">prix</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of listProd">
+                
+                    <th>{{product.product}}</th>
+                    <td>{{product.Nameprod}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td>{{product.prix | currency: 'USD'}}</td>
+                  
+                    <td> <i [routerLink]="['/editproduct',product._id]" class="fa-solid fa-pen text-primary"></i>
+                        <i  (click)="suppProduct(product._id)" class="fa-solid fa-trash-can text-danger"></i></td>
+                  </tr>
+                  <!-- <tr>
+                    <th>Rouge a levre</th>
+                    <td>YVES ST LAURENT</td>
+                    <td>20000</td>
+                    <td> 200.98 €</td>
+                    <td> <i class="fa-solid fa-pen text-primary"></i>
+                        <i class="fa-solid fa-trash-can text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <th>Parfum</th>
+                    <td>Dior</td>
+                    <td>20000</td>
+                    <td> 196.66 €</td>
+                    <td> <i class="fa-solid fa-pen text-primary"></i>
+                        <i class="fa-solid fa-trash-can text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <th>Sac a main</th>
+                    <td>GUCCI</td>
+                    <td>5000</td>
+                    <td>100 €</td>
+                    <td> <i class="fa-solid fa-pen text-primary"></i>
+                    <i class="fa-solid fa-trash-can text-danger"></i></td>
+                  </tr> -->
+                </tbody>
+              </table>
+              <!-- <h5 style="text-align: start; margin-top:10px;" *ngIf="listProd.length==0">Aucun produit afficher</h5> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>

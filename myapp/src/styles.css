@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+ background: #49a8e8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #32c5fa, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #6DD5FA, #084268); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.deco{
+    display:flex;
+    justify-content:space-between;
+}
